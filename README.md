@@ -1,4 +1,4 @@
-# SQL Practice
+# SQL_Practice
 
 This repository contains my SQL practice and training work using
 Microsoft SQL Server and SQL Server Management Studio (SSMS).
