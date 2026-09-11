@@ -1,89 +1,72 @@
 # SQL_Practice
 
-This repository contains my SQL practice and training work using
-Microsoft SQL Server and SQL Server Management Studio (SSMS).
+A structured, day-by-day collection of SQL practice work built while learning Microsoft SQL Server and SQL Server Management Studio (SSMS). The repository progresses from installing SSMS and writing basic commands, through constraints and joins, into stored procedures, views, and analytical querying with window functions — each topic kept in its own folder in the order it was learned.
+
+## About This Repository
+
+This is a personal training repository, not a production codebase. It exists to:
+
+- Keep a dated, topic-by-topic record of SQL concepts as they are learned
+- Provide working, runnable example queries for each concept, to revisit and revise later
+- Track progress from fundamentals (SELECT, constraints) through to more advanced querying (CTEs, window functions, query optimization)
 
 ## Repository Structure
 
-``` text
+```
 SQL_Practice/
 └── src/
-    ├── 01_sql_server_&_ssms_basics/
-    │   ├── sql_server_install.png
-    │   ├── ssms_interface.png
-    │   └── ssms_query_1.png
-    │
-    ├── 02_sql_basics/
-    │   ├── 01_create_database.sql
-    │   ├── 02_create_table.sql
-    │   ├── 03_insert_values.sql
-    │   ├── 04_select_command.sql
-    │   ├── 05_where_clause.sql
-    │   ├── 06_and_or_keyword.sql
-    │   ├── 07_order_by.sql
-    │   ├── 08_update_clause.sql
-    │   ├── 09_delete_keyword.sql
-    │   ├── 10_alter_table.sql
-    │   └── 11_drop_keyword.sql
-    │
-    ├── 03_sql_constraints/
-    │   ├── 01_not_null_constraint.sql
-    │   ├── 02_unique_constraint.sql
-    │   ├── 03_check_constraint.sql
-    │   ├── 04_default_constraint.sql
-    │   └── 05_foreign_key_constraint.sql
-    │
-    ├── 04_logical_query_processing_pipeline/
-    │   └── 01_logical_sql_processing_pipeline.sql
-    │
-    ├── 05_joins/
-    │   ├── 01_tables_for_join_operations.sql
-    │   ├── 02_inner_join.sql
-    │   ├── 03_left_join.sql
-    │   ├── 03_right_join.sql
-    │   ├── 04_full_join.sql
-    │   ├── 05_semi_join.sql
-    │   └── 06_anti_join.sql
-    │
-    └── 06_aggregation_&_having/
-        ├── 01_count_function.sql
-        ├── 02_sum_function.sql
-        ├── 03_average_function.sql
-        ├── 04_min_function.sql
-        ├── 05_max_function.sql
-        ├── 06_group_by.sql
-        └── 06_group_by_&_having.sql
+    ├── 01_sql_server_&_ssms_basics/       Installing SQL Server and SSMS, and touring the interface (Object Explorer, Query Editor, Results pane)
+    ├── 02_sql_basics/                     Core commands: CREATE, INSERT, SELECT, WHERE, ORDER BY, UPDATE, DELETE, ALTER, DROP
+    ├── 03_sql_constraints/                NOT NULL, UNIQUE, CHECK, DEFAULT, FOREIGN KEY — enforcing data integrity
+    ├── 04_logical_query_processing_pipeline/   How a query is actually evaluated: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY
+    ├── 05_joins/                          INNER, LEFT, RIGHT, FULL, SEMI, and ANTI joins across related tables
+    ├── 06_aggregation_&_having/           COUNT, SUM, AVG, MIN, MAX, GROUP BY, and filtering groups with HAVING
+    ├── 07_stored_procedure/               Creating and executing reusable, parameterized SQL logic
+    ├── 08_views/                          Saved SELECT queries used like virtual tables
+    ├── 09_cte_subquery/                   Common Table Expressions (WITH) and nested subqueries
+    ├── 10_window_functions/               ROW_NUMBER, RANK, LAG, and LEAD over partitioned, ordered data
+    ├── 11_running_total/                  Cumulative totals using SUM() as a window function
+    └── 12_qualify/                        Filtering window-function results directly (QUALIFY, and its SQL Server equivalent)
 ```
 
-## Topics Covered
+Each folder holds standalone, numbered `.sql` scripts (or screenshots, for the SSMS basics folder), ordered to match the sequence they were learned in. The numbering across folders reflects the actual training sequence, so the repository can also be read top to bottom as a learning path.
 
-1.  SQL Server and SSMS basics
-2.  SQL basics and commands
-3.  SQL constraints and data integrity
-4.  Logical query processing pipeline
-5.  SQL joins
-    -   INNER JOIN
-    -   LEFT JOIN
-    -   RIGHT JOIN
-    -   FULL JOIN
-    -   SEMI JOIN
-    -   ANTI JOIN
-6.  Aggregation and HAVING
-    -   COUNT
-    -   SUM
-    -   AVG
-    -   MIN
-    -   MAX
-    -   GROUP BY
-    -   HAVING
+## Topic Reference
+
+| # | Folder | Level |
+|---|---|---|
+| 01 | SSMS & SQL Server basics | Setup |
+| 02 | SQL basics | Fundamentals |
+| 03 | Constraints | Fundamentals |
+| 04 | Logical query processing | Fundamentals |
+| 05 | Joins | Intermediate |
+| 06 | Aggregation & HAVING | Intermediate |
+| 07 | Stored procedures | Intermediate |
+| 08 | Views | Intermediate |
+| 09 | CTEs & subqueries | Advanced |
+| 10 | Window functions | Advanced |
+| 11 | Running totals | Advanced |
+| 12 | QUALIFY | Advanced |
+
+## Prerequisites
+
+- Microsoft SQL Server (a local instance or Developer/Express edition)
+- SQL Server Management Studio (SSMS)
+
+## How to Use This Repository
+
+Clone the repository, then open any `.sql` file in SSMS to run it against a local database:
+
+```bash
+git clone https://github.com/shivam-a-diggibyte/SQL_Practice.git
+```
+
+Scripts are numbered to be worked through in order within each folder, and folders are numbered to be worked through in order overall — starting at `01_sql_server_&_ssms_basics` and progressing to the most recently added topic.
 
 ## Purpose
 
-The purpose of this repository is to maintain my SQL practice examples,
-queries, screenshots, and training exercises in an organized structure.
+A working record of SQL training — practice queries, constraint examples, join exercises, stored procedures, views, window-function exercises, and screenshots — kept in one organized, topic-by-topic structure for reference and revision as the material builds in difficulty.
 
-## Tools Used
+## Author
 
--   Microsoft SQL Server
--   SQL Server Management Studio (SSMS)
--   SQL
+**shivam-a-diggibyte**
